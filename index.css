@@ -1,0 +1,85 @@
+.building__indicator,
+.building__pulse {
+  background: #ff0;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.building__pulse {
+  animation: pulse 2.5s ease-out infinite;
+  opacity: 0.5;
+}
+
+@keyframes pulse {
+  100% {
+    opacity: 0;
+    transform: scale(7.5);
+  }
+}
+
+.building:not(.building--single) {
+  cursor: help;
+}
+
+.building__companies {
+  display: flex;
+}
+
+.company-map {
+  position: relative;
+}
+
+.company-map img {
+  display: block;
+  width: 100%;
+}
+
+.building {
+  box-sizing: border-box;
+  height: 3.333vw;
+  padding: 1.249875vw;
+  width: 3.333vw;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.con,
+.nn,
+.naji {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  display: none;
+}
+
+.building__companies {
+  animation: show 0.2s ease-out forwards;
+  background: white;
+  border-radius: 0.83325vw;
+  box-shadow: 0 0 1.6665vw rgba(0, 0, 0, 0.1);
+  bottom: calc(100% - 1.111vw);
+  cursor: auto;
+  font-size: 1.1vw;
+  font-weight: bold;
+  flex-wrap: wrap;
+  left: calc(100% - 1.6665vw);
+  line-height: 1.25;
+  opacity: 0;
+  padding: 1.25vw;
+  position: absolute;
+  transform: translateX(-50%) scale(0.75);
+  width: 14.5vw;
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+a {
+  background-color: white;
+  width: 100%;
+}

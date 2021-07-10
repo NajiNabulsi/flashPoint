@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class ="container-inner">
+    <div class="company-map">
+        <img src="https://www.ceecee-enschede.nl/wp-content/themes/ceecee/assets/img/map.png" srcset="https://www.ceecee-enschede.nl/wp-content/themes/ceecee/assets/img/map@2x.png 2x" alt="CeeCee map">
+
+        <div class="building" style="left: 77%; top: 42%;">
+            <div class="building__indicator">
+                <div class="con">
+                    <div class="building__company">
+                        <a href="*">just for testin</a>
+                        <a href="*">just for testin</a>
+                        <a href="*">just for testin</a>
+                    </div>
+                </div>
+            
+                <div class="building__pulse" data-info="con"></div>
+            </div>
+        </div>
+
+        <div class="building" style="left: 20%; top: 60%">
+            <div class="building__indicator">
+                <div class="nn">
+                    <div class="building__company">
+                        <a href="*">just for fun</a>
+                        <a href="*">just for fun</a>
+                        <a href="*">just for fun</a>
+                    </div>
+                </div>
+            
+                <div class="building__pulse" data-info="nn"></div>
+            </div>
+
+           
+        </div>
+        <div class="building" style="left: 58%; top: 16%;">
+            <div class="building__indicator">
+                <div class="naji">
+                    <div class="building__company">
+                        <a href="*">agin</a>
+                        
+                    </div>
+                </div>
+            
+                <div class="building__pulse" data-info="naji"></div>
+            </div>
+    </div>
+</div>
+
+<script>
+    const x = document.querySelectorAll('.building__pulse[data-info]')
+
+    x.forEach(ele => {
+        ele.addEventListener("mouseover", myScript);
+        ele.addEventListener("mouseleave", leave);
+    })
+    function myScript(e){
+        const x = e.target.dataset.info
+        const coment = document.querySelector(`.${x}`);
+        coment.style.display = "block"
+    }
+
+    function leave(e){
+        const x = e.target.dataset.info
+        const coment = document.querySelector(`.${x}`);
+        coment.style.display = "none"
+    }
+
+</script>
+</body>
+
+</html>
